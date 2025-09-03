@@ -14,5 +14,6 @@ int main(){
         {'a','b'},
         {'c','d'}
     };
+    cout<<array[1][4]<<endl;
 
 }

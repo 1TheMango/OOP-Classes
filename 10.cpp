@@ -13,7 +13,7 @@ int random_function_1(int input){
 }
 
 int main(){
-    int arr[2][3]{1,2,3,4}; //same as int arr[2][3]{{1,2,3},{4,0,0}}
+    int arr[2][3]={1,2,3,4}; //same as int arr[2][3]{{1,2,3},{4,0,0}}
     random_function_1(2);
     //manipuator chain
     float PI= 3.1415926535;
