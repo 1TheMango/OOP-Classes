@@ -20,5 +20,5 @@ class mass{
         int kg;
 };
 int main(){
-
+    
 };

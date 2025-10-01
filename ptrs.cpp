@@ -17,5 +17,5 @@ int main(){
 
     int a_var = 10;
     int& alias_a = a_var;
-
+    
 }
