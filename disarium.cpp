@@ -14,9 +14,3 @@ class Buffer{
 
 
 };
-
-struct Person{
-    int name; 
-    int age; 
-    void Yessss
-};
