@@ -12,4 +12,6 @@ Complex operator+(Complex &a,Complex &b){
 Complex operator-(Complex &a,Complex &b){
     return Complex(a.real-b.real,a.imaginary-b.imaginary);
 }
-  
+Complex operator*(Complex &a,Complex &b){
+    return Complex((a.real*)
+}
