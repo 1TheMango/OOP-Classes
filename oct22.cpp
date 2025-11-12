@@ -6,7 +6,7 @@ private:
     int age;
 
 public:
-    Animal() : age(0) {}
+    Animal() : age(0) {cout<<"yessir"<<endl;}
     Animal(int a) : age(a) {}
     virtual ~Animal() { cout << "animal passed" << endl; }
 

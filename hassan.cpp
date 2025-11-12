@@ -1,22 +1,4 @@
-// #include <iostream>
-// using namespace std;
-// class polynomial {
-//     private:
-//         int a;
-//         int b;
-//     public:
-//         polynomial(): a(0), b(0) {};
-//         polynomial(int as, int bs): a(as), b(bs) {};
-//         ~polynomial() {};
-//         polynomial(const polynomial& other) {};
-//     polynomial operator+(const polynomial&) {};
-// };
-// int main() {
-//     polynomial A;
-//     polynomial B = polynomial(5, 7);
-//     polynomial(C);
-//     polynomial C = A + B;
-// }
+
 
 #include <iostream>
 using namespace std;
@@ -54,6 +36,11 @@ public:
         ++a; ++b;
         return *this;
     }
+    polynomial operator++() { // return by value creates a new copy of the chaining result, probably doesnt work with multiple chainings
+        cout << "returning by value\n"; 
+        ++a; ++b;
+        return polynomial(a, b)
+    }
 
 
     // operator+= returning by reference
@@ -83,23 +70,18 @@ int main() {
     polynomial B(5, 7);
     polynomial C;
 
-    cout << "Testing operator+ chaining:\n";
-    C = A + B + B; // This works fine, operator+ returns by value so chaining is natural
+    C = A + B + B; // This works fine, operator+ returns by value so chaining is fine
     C.print();
 
-    cout << "\nTesting assignment chaining:\n";
     A = B = C; // Chain assignment
 
     A.print();
     B.print();
 
-    cout << "\nTesting prefix increment chaining:\n";
-    ++(++A); // Apply prefix increment twice
+    ++(++A);
 
     A.print();
-
-    cout << "\nTesting operator+= chaining:\n";
-    (A += B) += C; // Chain operator+=
+    (A += B) += C;
 
     A.print();
 
