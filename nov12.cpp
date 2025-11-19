@@ -23,17 +23,37 @@ class INT{
             ++data;
             return temp;
         }
+        friend ostream& operator<<(ostream& out, const INT& A);
+        friend istream& operator>>(istream& in , INT& A);
+        friend istream& getline(istream& in, INT& A);
+        INT& operator=(INT other){
+            if (data == other.data){
+                return *this;
+            }
+            else{
+                data = other.data;
+            }
+            return *this;
+        }
         
 };
 ostream& operator<<(ostream& out, const INT& A){
-    cout<<A.data<<endl;
-
+    out << A.data;
+    return out;
 }
+istream& operator>>(istream& in , INT& A){
+    in>>A.data;
+    //getline(in,A.data); //data should be int;
+    return in;
+}
+
 
 int main() {
     INT a(1);
     INT b(5);
-    cout<< A << endl;
-    cout << A << B <<endl;
+    cout<< a << endl;
+    cout << a <<"  " << b <<endl;
+    cout<<"what is ur number might guy"<<endl;
+    cin>>a;
     return 0;
 }
